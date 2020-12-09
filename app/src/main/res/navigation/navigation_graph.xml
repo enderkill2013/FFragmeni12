@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        tools:layout="@layout/fragment_first"
+        android:name="com.example.ffragmeni12.fragments.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_thirdFragment2"
+            app:destination="@id/navigation_notifications" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        tools:layout="@layout/fragment_second"
+        android:name="com.example.ffragmeni12.fragments.SecondFragment"
+        android:label="SecondFragment" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        tools:layout="@layout/fragment_third"
+        android:name="com.example.ffragmeni12.fragments.ThirdFragment"
+        android:label="ThirdFragment" >
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.ffragmeni12.fragments.FourFragment"
+        android:label="FourFragment"
+        tools:layout="@layout/fragment_four"/>
+</navigation>
